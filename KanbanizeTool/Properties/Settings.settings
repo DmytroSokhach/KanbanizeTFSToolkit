@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KanbanizeTool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KanbanizeUri" Provider="CustomPathSettingsProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://kanbanize.com/index.php/api/kanbanize</Value>
+    </Setting>
+    <Setting Name="ColorTask" Provider="CustomPathSettingsProvider" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">153, 173, 153</Value>
+    </Setting>
+    <Setting Name="ColorBUG" Provider="CustomPathSettingsProvider" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="ColorImprovement" Provider="CustomPathSettingsProvider" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="TfsServerUri" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TfsTaskLinkTemplate" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{0}/web/wi.aspx?id={1}</Value>
+    </Setting>
+    <Setting Name="TfsProjectName" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="KanbanizeApiKey" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="KanbanizeBoardId" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="TfsToKanbanizeAssigneeMapping" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Yevgen Ponomarenko&lt;/string&gt;
+  &lt;string&gt;Yevgen P&lt;/string&gt;
+  &lt;string&gt;Ievgenii Alieinikov&lt;/string&gt;
+  &lt;string&gt;Ievgenii A&lt;/string&gt;
+  &lt;string&gt;Ievgenii Tveritinov&lt;/string&gt;
+  &lt;string&gt;Eugene T&lt;/string&gt;
+  &lt;string&gt;Oleksandr Kuzmenko&lt;/string&gt;
+  &lt;string&gt;Alex K&lt;/string&gt;
+  &lt;string&gt;Igor Budzhak&lt;/string&gt;
+  &lt;string&gt;Igor B&lt;/string&gt;
+  &lt;string&gt;Alexey Rak&lt;/string&gt;
+  &lt;string&gt;Alexey R&lt;/string&gt;
+  &lt;string&gt;Andriy Rebrin&lt;/string&gt;
+  &lt;string&gt;Andrew R&lt;/string&gt;
+  &lt;string&gt;Dmytro Sokhach&lt;/string&gt;
+  &lt;string&gt;Dmytro S&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="TfsUserName" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TfsDomainName" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TfsPassword" Provider="CustomPathSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SettingsKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KanbanizeTfsTool</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

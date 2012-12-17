@@ -1,0 +1,91 @@
+﻿<Window x:Class="KanbanizeToolUi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:KanbanizeToolUi="clr-namespace:KanbanizeToolUi"
+        Height="350"
+        Width="525"
+        Title="MainWindow">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static KanbanizeToolUi:MainWindow.MenuRoutedCommand}"
+                        Executed="ExecutedMainMenuCommand"
+                        CanExecute="CanExecuteCustomCommand" />
+    </Window.CommandBindings>
+    <!--<Window.InputBindings>
+        <KeyBinding Command="{x:Static KanbanizeToolUi:MainWindow.MenuRoutedCommand}"
+                    Key="X"
+                    Modifiers="Control" />
+        <KeyBinding Command="{x:Static KanbanizeToolUi:MainWindow.MenuRoutedCommand}"
+                    Key="O"
+                    Modifiers="Control" />
+    </Window.InputBindings>-->
+
+
+    <!--Window control markup-->
+
+    <DockPanel>
+        <Menu Name="MainMenu"
+              HorizontalAlignment="Stretch"
+              IsMainMenu="True"
+              VerticalAlignment="Top"
+              DockPanel.Dock="Top">
+            <Menu.BitmapEffect>
+                <DropShadowBitmapEffect />
+            </Menu.BitmapEffect>
+
+            <MenuItem Header="_File">
+                <MenuItem Header="Open TFS query">
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            Stub for getting TFS query
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+
+                <Separator />
+                <MenuItem Header="_Exit"
+                          InputGestureText="Ctrl+X"
+                          Command="{x:Static KanbanizeToolUi:MainWindow.MenuRoutedCommand}"
+                          CommandParameter="File_Exit">
+                    <MenuItem.InputBindings>
+                        <KeyBinding Key="X"
+                                    Modifiers="Control">
+                        </KeyBinding>
+                    </MenuItem.InputBindings>
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            Click here to exit
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Options">
+                <MenuItem Header="_Edit"
+                          Command="{x:Static KanbanizeToolUi:MainWindow.MenuRoutedCommand}"
+                          CommandParameter="Options_Edit"
+                          InputGestureText="Ctrl+O">
+                    
+                    <!--Click="MenuItem_Click"-->
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            Edit current user configuration
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="_Delete">
+                    <!--Click="MenuItem_Click"-->
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            Click here to exit
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBlock Height="39"
+                   Name="curProjectState"
+                   Text="1. Only options menu is working for Configuration edit.
+                   No UI actions implemented."
+                   Width="410" />
+    </DockPanel>
+</Window>

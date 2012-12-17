@@ -1,0 +1,62 @@
+﻿<Window x:Class="KanbanizeToolUi.SettingsEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:local="clr-namespace:KanbanizeToolUi"
+        xmlns:Drawing="clr-namespace:System.Drawing;assembly=System.Drawing" Title="Settings Editor"
+        Height="500"
+        Width="440"
+        ShowInTaskbar="False">
+    <Grid>
+        <Grid.Resources>
+            <local:SystemDrawingColorConverter x:Key="DrawingColorConverter" />
+        </Grid.Resources>
+
+            <xctk:PropertyGrid   Name="propertyGrid"
+                             AutoGenerateProperties="False"
+                             Margin="0,0,0,29">
+
+            <xctk:PropertyGrid.EditorDefinitions>
+                <!--This editor definition for color-->
+                <xctk:EditorDefinition TargetType="{x:Type Drawing:Color}">
+                    <xctk:EditorDefinition.PropertiesDefinitions>
+                        <xctk:PropertyDefinition Name="ColorTask" />
+                        <xctk:PropertyDefinition Name="ColorBUG" />
+                        <xctk:PropertyDefinition Name="ColorImprovement" />
+                    </xctk:EditorDefinition.PropertiesDefinitions>
+                    <xctk:EditorDefinition.EditorTemplate>
+                        <DataTemplate>
+                            <xctk:ColorPicker DisplayColorAndName="True"
+                                              SelectedColor="{Binding Path=Value, Converter={StaticResource DrawingColorConverter}}">
+                            </xctk:ColorPicker>
+                        </DataTemplate>
+                    </xctk:EditorDefinition.EditorTemplate>
+                </xctk:EditorDefinition>
+            </xctk:PropertyGrid.EditorDefinitions>
+
+            <xctk:PropertyGrid.PropertyDefinitions>
+                <xctk:PropertyDefinition Name="ColorTask" />
+                <xctk:PropertyDefinition Name="ColorBUG" />
+                <xctk:PropertyDefinition Name="ColorImprovement" />
+                <xctk:PropertyDefinition Name="TfsServerUri" />
+                <xctk:PropertyDefinition Name="TfsTaskLinkTemplate" />
+                <xctk:PropertyDefinition Name="TfsProjectName" />
+                <xctk:PropertyDefinition Name="KanbanizeApiKey" />
+                <xctk:PropertyDefinition Name="KanbanizeBoardId" />
+                <xctk:PropertyDefinition Name="TfsUserName" />
+                <xctk:PropertyDefinition Name="TfsDomainName" />
+                <xctk:PropertyDefinition Name="TfsPassword" />
+            </xctk:PropertyGrid.PropertyDefinitions>
+                
+        </xctk:PropertyGrid>
+        
+        
+        <Button Content="O_K"
+                Height="23"
+                Name="saveButton"
+                Width="75"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="saveButton_Click">
+        </Button>
+    </Grid>
+</Window>
